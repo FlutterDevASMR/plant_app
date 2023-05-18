@@ -169,14 +169,14 @@ class _LoginScreenState extends State<LoginScreen> {
                                       ),
                                     );
                                   });
+                              Future.delayed(Duration(seconds: 3), () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => HomeScreen(),
+                                    ));
+                              });
                             }
-                            Future.delayed(Duration(seconds: 3), () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => HomeScreen(),
-                                  ));
-                            });
                           },
                           child: Text(
                             'Sign in',
